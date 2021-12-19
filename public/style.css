@@ -1,0 +1,16 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.map {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+}
+.player-head {
+    width: 32px;
+}
+tr {
+    text-align: left;
+}
