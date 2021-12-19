@@ -4,28 +4,46 @@
         <title>
             Minecraft Server
         </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
+    <body class="index">
+        <div class="links">
+            <a href="/map"><img src="map.png"/>Live map</a>
+        </div>
+        <table class='players' cellspacing="0">
         <% if (slots !== undefined && version !== undefined) { %>
-            
-            <p><a href="/map">Live map</a></p>
             <% if (players !== undefined && players.length !== 0) { %>
-                <table>
-                    <caption><%= players.length %> / <%= slots %></caption>
+                    <caption>Players Online:<br/><b><%= players.length %></b> / <%= slots %></caption>
                     <% for (let i = 0; i < players.length; i++) { %>
                         <tr>
                             <td><img class="player-head" src='https://mc-heads.net/avatar/<%= players[i] %>'></td>
-                            <th><%= players[i] %></th>
+                            <td><%= players[i] %></td>
                         </tr>
-                    <% } %>
-                </table>
+                        <% if (i >= config.maxPlayers && all === undefined) { %>
+                            <tr>
+                                <td>
+                                    <img class="player-head" src='arrow_down.png'>
+                                </td>
+                                <td>
+                                    <a href="/all">Show all</a>
+                                </td>
+                            </tr>
+                        <%    break
+                        }
+                    } %>
             <% } else { %>
-                No players online
+                <tr>
+                    <td>No players online</td>
+                </tr>
             <% } 
         } else { %>
-            Server is currently offline
+            <tr>
+                    <td>Server is currently offline</td>
+            </tr>
         <% } %>
-
+        </table>
     </body>
 </html>

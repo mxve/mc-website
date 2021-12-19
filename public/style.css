@@ -1,6 +1,16 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: rgb(30,30,30);
+    background-image: url('cave.png');
+    background-size: cover;
+    color: rgb(220,220,220);
+    font-family: 'VT323', monospace;
+}
+a {
+    color: rgb(220,220,220);
+    text-decoration: none;
+    border-bottom: 1px dotted rgb(220,220,220);
 }
 .map {
     width: 100vw;
@@ -8,9 +18,57 @@ html, body {
     display: block;
     overflow: hidden;
 }
-.player-head {
-    width: 32px;
+.players {
+    width: 300px;
+    margin: auto;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.3em;
+}
+.index {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.links {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+.links img {
+    width: 82px;
+    display: block;
+    margin-bottom: 6px;
+    filter: saturate(80%);
+}
+.links a:hover {
+    filter: saturate(140%);
+}
+table caption {
+    margin-bottom: 1em;
+    background-color: rgba(30,30,30,0.6);
+    border: 1px solid rgba(20,20,20, 0.6);
+    border-radius: 5px;
+    padding: 6px;
+}
+table {
+    background-color: rgba(30,30,30,0.6);
+    border: 1px solid rgba(20,20,20, 0.6);
 }
 tr {
-    text-align: left;
+    font-weight: 600;
+}
+tr:nth-child(even) {
+    background: rgba(30,30,30,0.6)}
+tr:nth-child(odd) {
+    background: rgba(20,20,20,0.6)}
+.player-head {
+    width: 32px;
+    margin-top: 4px;
+    margin-left: 4px;
+    padding: 0;
 }

@@ -11,13 +11,21 @@ app.get('/map', (req, res) => {
     res.render('map', {config})
 })
 
-app.get('/', async (req, res) => {
+async function index(req, res, all = undefined) {
     const query = await util.queryFull(config.mcAddress, config.mcPort).catch((error) => console.error(error))
     if (query === undefined) {
-        res.render('index', {players: undefined, slots: undefined, version: undefined, config})
+        res.render('index', {players: undefined, slots: undefined, version: undefined, all, config})
     } else {
-        res.render('index', {players: query.players.list, slots: query.players.max, version: query.version, config})
+        res.render('index', {players: query.players.list, slots: query.players.max, version: query.version, all, config})
     }
+}
+
+app.get('/', async (req, res) => {
+    index(req, res)
+})
+
+app.get('/all', async (req, res) => {
+    index(req, res, true)
 })
 
 app.listen(1998, () => {
