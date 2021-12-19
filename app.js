@@ -28,6 +28,6 @@ app.get('/all', async (req, res) => {
     index(req, res, true)
 })
 
-app.listen(1998, () => {
+app.listen(config.port, () => {
     console.log(`up`)
 })
