@@ -16,8 +16,12 @@
         </div>
         <table class='players' cellspacing="0">
         <% if (slots !== undefined && version !== undefined) { %>
+            <caption>Players Online:<br/><b><%= players.length %></b> / <%= slots %></caption>
+            <tr>
+                <td>Addr</td>
+                <td><%= config.mcAddress %></td>
+            </tr>
             <% if (players !== undefined && players.length !== 0) { %>
-                    <caption>Players Online:<br/><b><%= players.length %></b> / <%= slots %></caption>
                     <% for (let i = 0; i < players.length; i++) { %>
                         <tr>
                             <td><img class="player-head" src='https://mc-heads.net/avatar/<%= players[i] %>'></td>
@@ -35,10 +39,6 @@
                         <%    break
                         }
                     } %>
-            <% } else { %>
-                <tr>
-                    <td>No players online</td>
-                </tr>
             <% } 
         } else { %>
             <tr>
