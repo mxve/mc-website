@@ -20,6 +20,7 @@ a {
     background-color: rgb(30,30,30);
     background-image: url('cave.png');
     background-size: unset;
+    background-attachment: fixed;
     color: rgb(220,220,220);
     font-family: 'VT323', monospace;
 }
@@ -54,7 +55,7 @@ a {
     padding-bottom: 24px;
     border-radius: 5px;
     font-size: 1.3em;
-    background-color: rgba(30,30,30,0.6);
+    background-color: rgba(30,30,30,0.9);
 }
 table caption {
     margin-bottom: 1em;
@@ -81,7 +82,7 @@ tr:nth-child(odd) {
     padding: 0;
 }
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 50vw;
     left: 25vw;
