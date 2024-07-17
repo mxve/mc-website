@@ -12,12 +12,6 @@ a {
     text-decoration: none;
     border-bottom: 1px dotted rgb(220,220,220);
 }
-.map {
-    width: 100vw;
-    height: 100vh;
-    display: block;
-    overflow: hidden;
-}
 .players {
     width: 300px;
     margin: auto;
@@ -25,7 +19,7 @@ a {
     border-radius: 5px;
     font-size: 1.3em;
 }
-.index {
+.page {
     margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -47,6 +41,20 @@ a {
 }
 .links a:hover {
     filter: saturate(140%);
+}
+.links a {
+    display: block;
+    margin-bottom: 30px;
+}
+.content {
+    width: 50vw;
+    min-width: 300px;
+    margin: auto;
+    padding: 12px;
+    padding-bottom: 24px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    background-color: rgba(30,30,30,0.6);
 }
 table caption {
     margin-bottom: 1em;
@@ -71,4 +79,19 @@ tr:nth-child(odd) {
     margin-top: 4px;
     margin-left: 4px;
     padding: 0;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 50vw;
+    left: 25vw;
+    background-color: rgba(30,30,30,0.6);
+    padding: 6px;
+    text-align: center;
+    font-size: 0.8em;
+}
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
 }

@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
         <title>
             Minecraft Server
         </title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="style.css" />
+        <%- include('head') %>
     </head>
-    <body class="index">
-        <div class="links">
-            <a href="/map"><img src="map.png"/>Live map</a>
-        </div>
+    <body class="page">
+        <%- include('links') -%> 
         <table class='players' cellspacing="0">
         <% if (slots !== undefined && version !== undefined) { %>
             <caption>Players Online:<br/><b><%= players.length %></b> / <%= slots %></caption>
@@ -46,5 +40,6 @@
             </tr>
         <% } %>
         </table>
+        <%- include('footer') -%> 
     </body>
 </html>

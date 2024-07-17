@@ -7,8 +7,8 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-app.get('/map', (req, res) => {
-    res.render('map', {config})
+app.get('/setup', (req, res) => {
+    res.render('setup', {config})
 })
 
 async function index(req, res, all = undefined) {
