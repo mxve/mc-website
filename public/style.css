@@ -1,11 +1,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: rgb(30,30,30);
-    background-image: url('cave.png');
-    background-size: unset;
-    color: rgb(220,220,220);
-    font-family: 'VT323', monospace;
 }
 a {
     color: rgb(220,220,220);
@@ -22,6 +17,11 @@ a {
 .page {
     margin-bottom: 30px;
     margin-top: 30px;
+    background-color: rgb(30,30,30);
+    background-image: url('cave.png');
+    background-size: unset;
+    color: rgb(220,220,220);
+    font-family: 'VT323', monospace;
 }
 .links {
     display: block;
